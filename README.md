@@ -14,16 +14,14 @@ Copy RPM files to this directory
 Building the Docker image require the Modelio and ArchiMate RPMs to be available at build time.
 At the time of writing, the files were:
 
-modelio-open-source3.8-3.8.1.el7.x86_64.rpm
-modelio-archimate3.8-3.8.1.noarch.rpm
+modelio-open-source4.1x86_64.rpm
 
 These can be freely downloaded from the Modelio web site (https://www.modelio.org)
 
 You should end up with the contents of the build directory looking like this:
 
 Dockerfile
-modelio-archimate3.8-3.8.1.noarch.rpm
-modelio-open-source3.8-3.8.1.el7.x86_64.rpm
+modelio-open-source_4.1.0.el7.x86_64.rpm
 modelio.sh 
 
 It is quite likely that a newer version will be available at the time of reading
@@ -35,7 +33,7 @@ Naturally I have specifically not included the RPMs in this repository.
 
 Build the Modelio image
 -----------------------
-sudo docker build -t modelio .
+docker build -t modelio:latest ./
 
 
 Run an image
